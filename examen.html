@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Final Exam - Future English</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/examen.css">
+
+</head>
+
+<body>
+
+
+<!-- ==============================
+     BARRA DE NAVEGACIÓN
+============================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Future<span>English</span>
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="aprender.html">
+                    Learn
+                </a>
+            </li>
+
+            <li>
+                <a href="jugar.html">
+                    Practice
+                </a>
+            </li>
+
+            <li>
+                <a href="examen.html" class="active">
+                    Final Exam
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ==============================
+     CONTENIDO PRINCIPAL
+============================== -->
+
+<main>
+
+
+    <!-- ENCABEZADO -->
+
+    <section class="exam-header">
+
+        <p class="small-title">
+            FINAL CHALLENGE
+        </p>
+
+        <h1>
+            Final <span>Exam</span>
+        </h1>
+
+        <p>
+            Demuestra lo que has aprendido sobre las diferentes
+            formas de hablar del futuro en inglés.
+        </p>
+
+    </section>
+
+
+
+    <!-- ==============================
+         INFORMACIÓN DEL EXAMEN
+    ============================== -->
+
+    <section class="exam-info">
+
+        <div class="exam-info-card">
+
+            <div class="exam-info-icon">
+                📝
+            </div>
+
+            <div>
+
+                <strong>
+                    10 Questions
+                </strong>
+
+                <span>
+                    Responde todas las preguntas.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="exam-info-card">
+
+            <div class="exam-info-icon">
+                ⏱️
+            </div>
+
+            <div>
+
+                <strong>
+                    No Time Limit
+                </strong>
+
+                <span>
+                    Tómate tu tiempo para pensar.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="exam-info-card">
+
+            <div class="exam-info-icon">
+                🏆
+            </div>
+
+            <div>
+
+                <strong>
+                    Final Score
+                </strong>
+
+                <span>
+                    Obtén tu calificación al terminar.
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         EXAMEN
+    ============================== -->
+
+    <section class="exam-container">
+
+
+        <!-- CABECERA DEL EXAMEN -->
+
+        <div class="exam-top">
+
+            <div>
+
+                <p class="exam-label">
+                    FINAL EXAM
+                </p>
+
+                <h2>
+                    Future Tenses
+                </h2>
+
+            </div>
+
+
+            <div class="question-counter">
+
+                <span id="currentQuestion">
+                    1
+                </span>
+
+                /
+                
+                <span>
+                    10
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- BARRA DE PROGRESO -->
+
+        <div class="exam-progress">
+
+            <div id="examProgress"></div>
+
+        </div>
+
+
+
+        <!-- PREGUNTA -->
+
+        <div class="exam-question">
+
+            <p class="question-number">
+                QUESTION <span id="questionNumber">1</span>
+            </p>
+
+            <h2 id="examQuestion">
+                I think it ______ rain tomorrow.
+            </h2>
+
+
+            <!-- RESPUESTAS -->
+
+            <div
+                class="exam-answers"
+                id="examAnswers">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FEEDBACK -->
+
+        <div
+            id="examFeedback"
+            class="exam-feedback">
+        </div>
+
+
+
+        <!-- CONTROLES -->
+
+        <div class="exam-controls">
+
+            <button
+                id="previousBtn"
+                class="previous-btn"
+                type="button">
+
+                ← Previous
+
+            </button>
+
+
+            <button
+                id="nextExamBtn"
+                class="next-exam-btn"
+                type="button">
+
+                Next →
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         RESULTADO
+    ============================== -->
+
+    <section
+        id="examResult"
+        class="exam-result">
+
+
+        <div class="result-trophy">
+            🏆
+        </div>
+
+
+        <p class="result-label">
+            EXAM COMPLETED
+        </p>
+
+
+        <h2>
+            Your Final Score
+        </h2>
+
+
+        <div
+            id="scoreCircle"
+            class="score-circle">
+
+            <strong id="finalScore">
+                0
+            </strong>
+
+            <span>
+                / 10
+            </span>
+
+        </div>
+
+
+        <h3 id="resultTitle">
+            Good job!
+        </h3>
+
+
+        <p id="resultDescription">
+            Revisa tus resultados y continúa practicando.
+        </p>
+
+
+        <div class="result-buttons">
+
+            <button
+                id="restartExamBtn"
+                class="restart-exam-btn">
+
+                Try Again
+
+            </button>
+
+
+            <a
+                href="index.html"
+                class="home-exam-btn">
+
+                Back to Home
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ==============================
+     FOOTER
+============================== -->
+
+<footer>
+
+    <p>
+        © 2026 Future English | Learn • Practice • Improve
+    </p>
+
+</footer>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="js/examen.js"></script>
+
+</body>
+
+</html>

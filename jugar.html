@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Practice & Play - Future English</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jugar.css">
+</head>
+
+<body>
+
+<!-- BARRA DE NAVEGACIÓN -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Future<span>English</span>
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="aprender.html">
+                    Learn
+                </a>
+            </li>
+
+            <li>
+                <a href="jugar.html" class="active">
+                    Practice
+                </a>
+            </li>
+
+            <li>
+                <a href="examen.html">
+                    Final Exam
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- CONTENIDO PRINCIPAL -->
+
+<main>
+
+    <!-- ENCABEZADO -->
+
+    <section class="practice-header">
+
+        <p class="small-title">
+            PRACTICE YOUR ENGLISH
+        </p>
+
+        <h1>
+            Practice <span>&</span> Play
+        </h1>
+
+        <p>
+            Pon a prueba tus conocimientos sobre las diferentes
+            formas de hablar del futuro en inglés.
+        </p>
+
+    </section>
+
+
+    <!-- JUEGO -->
+
+    <section class="game-container">
+
+        <div class="game-top">
+
+            <div class="game-title">
+                <span class="game-icon">🎮</span>
+
+                <div>
+                    <p class="game-label">
+                        FUTURE TENSES
+                    </p>
+
+                    <h2>
+                        Choose the correct answer
+                    </h2>
+                </div>
+            </div>
+
+
+            <div class="score-box">
+
+                <span>
+                    SCORE
+                </span>
+
+                <strong id="score">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROGRESO -->
+
+        <div class="progress-container">
+
+            <div class="progress-text">
+                Question <span id="questionNumber">1</span> of 10
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+
+        </div>
+
+
+        <!-- PREGUNTA -->
+
+        <div class="question-card">
+
+            <p class="question-label">
+                COMPLETE THE SENTENCE
+            </p>
+
+            <h2 id="question">
+                I think it ______ rain tomorrow.
+            </h2>
+
+
+            <!-- RESPUESTAS -->
+
+            <div class="answers" id="answers">
+
+                <button class="answer-btn">
+                    will
+                </button>
+
+                <button class="answer-btn">
+                    going to
+                </button>
+
+                <button class="answer-btn">
+                    am
+                </button>
+
+                <button class="answer-btn">
+                    are
+                </button>
+
+            </div>
+
+
+            <!-- RESULTADO -->
+
+            <div id="feedback" class="feedback"></div>
+
+
+            <!-- BOTÓN SIGUIENTE -->
+
+            <button id="nextBtn" class="next-btn">
+                Next Question →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- INFORMACIÓN -->
+
+    <section class="practice-info">
+
+        <div class="info-card">
+
+            <div class="info-icon">
+                💡
+            </div>
+
+            <div>
+
+                <h3>
+                    How to play
+                </h3>
+
+                <p>
+                    Lee cada oración y selecciona la opción que
+                    complete correctamente la frase.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="info-icon">
+                ⭐
+            </div>
+
+            <div>
+
+                <h3>
+                    Your goal
+                </h3>
+
+                <p>
+                    Responde correctamente las 10 preguntas y
+                    consigue la mayor puntuación posible.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULTADO FINAL -->
+
+    <section id="finalResult" class="final-result">
+
+        <div class="result-icon">
+            🏆
+        </div>
+
+        <h2>
+            Practice Complete!
+        </h2>
+
+        <p>
+            Your final score is:
+        </p>
+
+        <strong id="finalScore">
+            0 / 10
+        </strong>
+
+        <p id="resultMessage">
+            ¡Buen trabajo!
+        </p>
+
+        <button id="restartBtn" class="restart-btn">
+            Play Again
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Future English | Learn • Practice • Improve
+    </p>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="js/jugar.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,661 @@
+/* =========================================
+   PÁGINA PRACTICE & PLAY
+========================================= */
+
+
+/* -----------------------------------------
+   ENCABEZADO
+----------------------------------------- */
+
+.practice-header {
+
+    width: 90%;
+    max-width: 900px;
+
+    margin: 65px auto 45px;
+
+    text-align: center;
+}
+
+.practice-header .small-title {
+
+    color: #6c63ff;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.practice-header h1 {
+
+    font-size: 52px;
+
+    color: #172033;
+
+    margin-bottom: 18px;
+}
+
+.practice-header h1 span {
+
+    color: #6c63ff;
+}
+
+.practice-header > p:last-child {
+
+    color: #6b7280;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+
+/* -----------------------------------------
+   CONTENEDOR DEL JUEGO
+----------------------------------------- */
+
+.game-container {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 0 auto 45px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* -----------------------------------------
+   PARTE SUPERIOR
+----------------------------------------- */
+
+.game-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.game-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+.game-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    background: #f0efff;
+
+    border-radius: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.game-label {
+
+    color: #6c63ff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+.game-title h2 {
+
+    font-size: 25px;
+
+    color: #242b5c;
+}
+
+
+/* -----------------------------------------
+   PUNTUACIÓN
+----------------------------------------- */
+
+.score-box {
+
+    background: #171b36;
+
+    color: white;
+
+    border-radius: 14px;
+
+    padding: 12px 22px;
+
+    text-align: center;
+}
+
+.score-box span {
+
+    display: block;
+
+    font-size: 11px;
+
+    opacity: 0.7;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 3px;
+}
+
+.score-box strong {
+
+    font-size: 25px;
+
+    color: #ffffff;
+}
+
+
+/* -----------------------------------------
+   PROGRESO
+----------------------------------------- */
+
+.progress-container {
+
+    margin-bottom: 30px;
+}
+
+.progress-text {
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 8px;
+
+    background: #eeeeF8;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress-bar div {
+
+    height: 100%;
+
+    width: 10%;
+
+    background: linear-gradient(
+        90deg,
+        #6c63ff,
+        #8d5cff
+    );
+
+    border-radius: 10px;
+
+    transition: width 0.4s ease;
+}
+
+
+/* -----------------------------------------
+   TARJETA DE PREGUNTA
+----------------------------------------- */
+
+.question-card {
+
+    background: #f7f8ff;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    text-align: center;
+}
+
+.question-label {
+
+    color: #6c63ff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+.question-card h2 {
+
+    color: #242b5c;
+
+    font-size: 28px;
+
+    margin-bottom: 30px;
+
+    line-height: 1.4;
+}
+
+
+/* -----------------------------------------
+   RESPUESTAS
+----------------------------------------- */
+
+.answers {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+.answer-btn {
+
+    background: white;
+
+    border: 2px solid #e1e3f2;
+
+    border-radius: 12px;
+
+    padding: 17px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    color: #333;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.answer-btn:hover {
+
+    border-color: #6c63ff;
+
+    color: #6c63ff;
+
+    transform: translateY(-2px);
+}
+
+
+/* RESPUESTA CORRECTA */
+
+.answer-btn.correct {
+
+    background: #e8faf1;
+
+    border-color: #20bf6b;
+
+    color: #16864c;
+}
+
+
+/* RESPUESTA INCORRECTA */
+
+.answer-btn.incorrect {
+
+    background: #fff0f0;
+
+    border-color: #ff5c5c;
+
+    color: #d63030;
+}
+
+
+/* -----------------------------------------
+   FEEDBACK
+----------------------------------------- */
+
+.feedback {
+
+    min-height: 25px;
+
+    margin: 20px 0;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+.feedback.correct-text {
+
+    color: #20a45b;
+}
+
+.feedback.incorrect-text {
+
+    color: #e04444;
+}
+
+
+/* -----------------------------------------
+   BOTÓN SIGUIENTE
+----------------------------------------- */
+
+.next-btn {
+
+    border: none;
+
+    background: #6c63ff;
+
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.next-btn:hover {
+
+    background: #5148e5;
+
+    transform: translateY(-2px);
+}
+
+
+/* -----------------------------------------
+   INFORMACIÓN
+----------------------------------------- */
+
+.practice-info {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 0 auto 60px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.info-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    display: flex;
+
+    gap: 18px;
+
+    align-items: flex-start;
+
+    box-shadow:
+        0 6px 22px rgba(0, 0, 0, 0.05);
+}
+
+.info-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    background: #f0efff;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+    flex-shrink: 0;
+}
+
+.info-card h3 {
+
+    color: #242b5c;
+
+    margin-bottom: 8px;
+}
+
+.info-card p {
+
+    color: #6b7280;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+
+/* -----------------------------------------
+   RESULTADO FINAL
+----------------------------------------- */
+
+.final-result {
+
+    display: none;
+
+    width: 90%;
+
+    max-width: 700px;
+
+    margin: 50px auto 70px;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #6c63ff,
+        #8d5cff
+    );
+
+    color: white;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 40px rgba(108, 99, 255, 0.25);
+}
+
+.final-result.show {
+
+    display: block;
+}
+
+.result-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.final-result h2 {
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+.final-result p {
+
+    opacity: 0.9;
+
+    margin-bottom: 10px;
+}
+
+.final-result > strong {
+
+    display: block;
+
+    font-size: 45px;
+
+    margin: 10px 0 20px;
+}
+
+#resultMessage {
+
+    font-size: 16px;
+
+    margin-bottom: 25px;
+}
+
+
+/* -----------------------------------------
+   BOTÓN REINICIAR
+----------------------------------------- */
+
+.restart-btn {
+
+    border: none;
+
+    background: white;
+
+    color: #6c63ff;
+
+    padding: 14px 30px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.restart-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* -----------------------------------------
+   RESPONSIVE
+----------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .practice-header h1 {
+
+        font-size: 40px;
+    }
+
+    .game-container {
+
+        padding: 22px;
+    }
+
+    .game-top {
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .game-title h2 {
+
+        font-size: 20px;
+    }
+
+    .game-icon {
+
+        width: 50px;
+
+        height: 50px;
+
+        font-size: 25px;
+    }
+
+    .question-card {
+
+        padding: 25px 18px;
+    }
+
+    .question-card h2 {
+
+        font-size: 22px;
+    }
+
+    .answers {
+
+        grid-template-columns: 1fr;
+    }
+
+    .practice-info {
+
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .game-top {
+
+        flex-direction: column;
+    }
+
+    .score-box {
+
+        align-self: flex-end;
+    }
+
+}

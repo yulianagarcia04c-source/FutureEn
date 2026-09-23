@@ -1,0 +1,495 @@
+/* -----------------------------
+   CONFIGURACIÓN GENERAL
+----------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7ff;
+    color: #172033;
+}
+
+
+/* -----------------------------
+   NAVBAR
+----------------------------- */
+
+header {
+    background: #ffffff;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #242b5c;
+}
+
+.logo span {
+    color: #6c63ff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #6c63ff;
+}
+
+
+/* -----------------------------
+   HERO
+----------------------------- */
+
+.hero {
+    width: 90%;
+    max-width: 1200px;
+    margin: 70px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+/* -----------------------------
+   TEXTO DEL HERO
+----------------------------- */
+
+.small-title {
+    color: #6c63ff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #6c63ff;
+}
+
+.description {
+    color: #626979;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+
+/* -----------------------------
+   BOTONES
+----------------------------- */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background: #6c63ff;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #5148e5;
+    transform: translateY(-3px);
+}
+
+.btn.secondary {
+    background: white;
+    color: #6c63ff;
+    border: 2px solid #6c63ff;
+}
+
+.btn.secondary:hover {
+    background: #6c63ff;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* -----------------------------
+   SLIDER
+----------------------------- */
+
+.slider-container {
+    position: relative;
+}
+
+.slider {
+    position: relative;
+
+    min-height: 390px;
+
+    background: linear-gradient(
+        135deg,
+        #6c63ff,
+        #8d5cff
+    );
+
+    border-radius: 25px;
+
+    padding: 45px;
+
+    color: white;
+
+    box-shadow: 0 20px 40px rgba(108, 99, 255, 0.25);
+}
+
+
+/* Slides */
+
+.slide {
+    display: none;
+    animation: fade 0.5s ease;
+}
+
+/* IMPORTANTE:
+   Esta clase coincide con slider.js */
+
+.slide.active-slide {
+    display: block;
+}
+
+@keyframes fade {
+
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* -----------------------------
+   CONTENIDO DEL SLIDE
+----------------------------- */
+
+.slide-number {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.slide .icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.slide h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.use {
+    font-size: 17px;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.example {
+    background: rgba(255, 255, 255, 0.15);
+
+    border-radius: 12px;
+
+    padding: 20px;
+}
+
+.example p {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.example span {
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.example strong {
+    color: white;
+}
+
+
+/* -----------------------------
+   CONTROLES DEL SLIDER
+----------------------------- */
+
+.slider-controls {
+    position: absolute;
+
+    bottom: 25px;
+    left: 45px;
+    right: 45px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-controls button {
+    border: none;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+.slider-controls button:hover {
+    background: white;
+    color: #6c63ff;
+}
+
+
+/* -----------------------------
+   PUNTOS DEL SLIDER
+----------------------------- */
+
+.dots {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+
+    background: rgba(255, 255, 255, 0.4);
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* IMPORTANTE:
+   Esta clase coincide con slider.js */
+
+.dot.active-dot {
+    background: white;
+    transform: scale(1.2);
+}
+
+
+/* -----------------------------
+   TARJETAS INFERIORES
+----------------------------- */
+
+.features {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto 70px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.feature-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+    text-decoration: none;
+
+    color: #172033;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+}
+
+.feature-icon {
+    font-size: 35px;
+    flex-shrink: 0;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+
+/* -----------------------------
+   FOOTER
+----------------------------- */
+
+footer {
+    background: #171b36;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    font-size: 14px;
+}
+
+
+/* -----------------------------
+   AUTORES
+----------------------------- */
+
+.authors {
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.authors strong {
+    color: #ffffff;
+}
+
+
+/* -----------------------------
+   RESPONSIVE
+----------------------------- */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        margin: 40px auto;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .slider {
+        min-height: 390px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .hero {
+        width: 92%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .slider {
+        padding: 30px;
+        min-height: 420px;
+    }
+
+    .slide h2 {
+        font-size: 32px;
+    }
+
+    .slide-number {
+        margin-bottom: 20px;
+    }
+
+    .slider-controls {
+        left: 30px;
+        right: 30px;
+    }
+
+    .feature-card {
+        padding: 25px;
+    }
+}

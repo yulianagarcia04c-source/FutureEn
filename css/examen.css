@@ -1,0 +1,690 @@
+/* =========================================
+   PÁGINA FINAL EXAM
+========================================= */
+
+
+/* -----------------------------------------
+   ENCABEZADO
+----------------------------------------- */
+
+.exam-header {
+
+    width: 90%;
+    max-width: 850px;
+
+    margin: 65px auto 40px;
+
+    text-align: center;
+}
+
+.exam-header .small-title {
+
+    color: #6c63ff;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.exam-header h1 {
+
+    font-size: 52px;
+
+    color: #172033;
+
+    margin-bottom: 18px;
+}
+
+.exam-header h1 span {
+
+    color: #6c63ff;
+}
+
+.exam-header > p:last-child {
+
+    color: #6b7280;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+/* -----------------------------------------
+   INFORMACIÓN
+----------------------------------------- */
+
+.exam-info {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 0 auto 35px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.exam-info-card {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.exam-info-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    background: #f0efff;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+    flex-shrink: 0;
+}
+
+.exam-info-card strong {
+
+    display: block;
+
+    color: #242b5c;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.exam-info-card span {
+
+    color: #7b8190;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+/* -----------------------------------------
+   CONTENEDOR EXAMEN
+----------------------------------------- */
+
+.exam-container {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 0 auto 70px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* -----------------------------------------
+   PARTE SUPERIOR
+----------------------------------------- */
+
+.exam-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.exam-label {
+
+    color: #6c63ff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+.exam-top h2 {
+
+    color: #242b5c;
+
+    font-size: 25px;
+}
+
+.question-counter {
+
+    background: #171b36;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+}
+
+.question-counter span:first-child {
+
+    color: #8d5cff;
+
+}
+
+
+/* -----------------------------------------
+   PROGRESO
+----------------------------------------- */
+
+.exam-progress {
+
+    width: 100%;
+
+    height: 8px;
+
+    background: #eeeeF8;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin-bottom: 35px;
+}
+
+.exam-progress div {
+
+    height: 100%;
+
+    width: 10%;
+
+    background: linear-gradient(
+        90deg,
+        #6c63ff,
+        #8d5cff
+    );
+
+    border-radius: 10px;
+
+    transition: width 0.4s ease;
+}
+
+
+/* -----------------------------------------
+   PREGUNTA
+----------------------------------------- */
+
+.exam-question {
+
+    background: #f7f8ff;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    text-align: center;
+}
+
+.question-number {
+
+    color: #6c63ff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+.exam-question h2 {
+
+    color: #242b5c;
+
+    font-size: 28px;
+
+    line-height: 1.5;
+
+    margin-bottom: 30px;
+}
+
+
+/* -----------------------------------------
+   RESPUESTAS
+----------------------------------------- */
+
+.exam-answers {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.exam-answer {
+
+    background: white;
+
+    border: 2px solid #e1e3f2;
+
+    border-radius: 12px;
+
+    padding: 17px;
+
+    color: #333;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.exam-answer:hover {
+
+    border-color: #6c63ff;
+
+    color: #6c63ff;
+
+    transform: translateY(-2px);
+}
+
+.exam-answer.selected {
+
+    border-color: #6c63ff;
+
+    background: #f0efff;
+
+    color: #5148e5;
+}
+
+
+/* -----------------------------------------
+   FEEDBACK
+----------------------------------------- */
+
+.exam-feedback {
+
+    min-height: 25px;
+
+    text-align: center;
+
+    margin: 18px 0;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* -----------------------------------------
+   CONTROLES
+----------------------------------------- */
+
+.exam-controls {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 25px;
+}
+
+.previous-btn,
+.next-exam-btn {
+
+    border: none;
+
+    padding: 14px 25px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.previous-btn {
+
+    background: #eeeeF8;
+
+    color: #555;
+}
+
+.previous-btn:hover {
+
+    background: #e1e2f0;
+}
+
+.next-exam-btn {
+
+    background: #6c63ff;
+
+    color: white;
+}
+
+.next-exam-btn:hover {
+
+    background: #5148e5;
+
+    transform: translateY(-2px);
+}
+
+
+/* -----------------------------------------
+   RESULTADO
+----------------------------------------- */
+
+.exam-result {
+
+    display: none;
+
+    width: 90%;
+
+    max-width: 700px;
+
+    margin: 0 auto 70px;
+
+    padding: 50px 30px;
+
+    background: linear-gradient(
+        135deg,
+        #6c63ff,
+        #8d5cff
+    );
+
+    color: white;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 40px rgba(108, 99, 255, 0.25);
+}
+
+.exam-result.show {
+
+    display: block;
+}
+
+.result-trophy {
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+.result-label {
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.8;
+
+    margin-bottom: 8px;
+}
+
+.exam-result h2 {
+
+    font-size: 32px;
+
+    margin-bottom: 25px;
+}
+
+
+/* -----------------------------------------
+   CÍRCULO DE PUNTUACIÓN
+----------------------------------------- */
+
+.score-circle {
+
+    width: 150px;
+
+    height: 150px;
+
+    margin: 0 auto 25px;
+
+    border: 8px solid
+        rgba(255, 255, 255, 0.25);
+
+    border-top-color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.score-circle strong {
+
+    font-size: 50px;
+}
+
+.score-circle span {
+
+    font-size: 20px;
+
+    margin-top: 22px;
+
+    margin-left: 3px;
+
+    opacity: 0.8;
+}
+
+
+/* -----------------------------------------
+   MENSAJE RESULTADO
+----------------------------------------- */
+
+.exam-result h3 {
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+.result-description {
+
+    opacity: 0.9;
+
+    line-height: 1.6;
+}
+
+
+/* -----------------------------------------
+   BOTONES RESULTADO
+----------------------------------------- */
+
+.result-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.restart-exam-btn,
+.home-exam-btn {
+
+    padding: 14px 25px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.restart-exam-btn {
+
+    border: none;
+
+    background: white;
+
+    color: #6c63ff;
+}
+
+.home-exam-btn {
+
+    background: rgba(255, 255, 255, 0.15);
+
+    color: white;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.3);
+}
+
+.restart-exam-btn:hover,
+.home-exam-btn:hover {
+
+    transform: translateY(-3px);
+}
+
+
+/* -----------------------------------------
+   RESPONSIVE
+----------------------------------------- */
+
+@media (max-width: 750px) {
+
+    .exam-header h1 {
+
+        font-size: 40px;
+    }
+
+    .exam-info {
+
+        grid-template-columns: 1fr;
+    }
+
+    .exam-container {
+
+        padding: 22px;
+    }
+
+    .exam-top {
+
+        gap: 15px;
+
+        align-items: flex-start;
+    }
+
+    .exam-question {
+
+        padding: 25px 18px;
+    }
+
+    .exam-question h2 {
+
+        font-size: 22px;
+    }
+
+    .exam-answers {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .exam-top {
+
+        flex-direction: column;
+    }
+
+    .question-counter {
+
+        align-self: flex-end;
+    }
+
+    .exam-controls {
+
+        gap: 10px;
+    }
+
+    .previous-btn,
+    .next-exam-btn {
+
+        padding: 12px 16px;
+    }
+
+    .result-buttons {
+
+        flex-direction: column;
+    }
+
+}
